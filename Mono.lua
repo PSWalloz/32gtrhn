@@ -150,7 +150,7 @@ getgenv().getnilinstances = function()
 	end
 	return objs
 end
-
+--[[
 getgenv().getscripts = function()
     local scripts = {}
     for i, v in pairs(game:GetDescendants()) do
@@ -160,7 +160,7 @@ getgenv().getscripts = function()
     end
     return scripts
 end
-
+]]
 getgenv().getscripthash = function(script)
     return script:GetHash()
 end
