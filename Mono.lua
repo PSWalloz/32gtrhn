@@ -151,6 +151,16 @@ getgenv().getnilinstances = function()
 	return objs
 end
 
+getgenv().getscripts = function()
+    local scripts = {}
+    for i, v in pairs(game:GetDescendants()) do
+        if v:IsA("LocalScript") or v:IsA("ModuleScript") then
+            table.insert(scripts, v)
+        end
+    end
+    return scripts
+end
+
 getgenv().getscripthash = function(script)
     return script:GetHash()
 end
